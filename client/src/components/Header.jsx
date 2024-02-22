@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import logo1 from './logo1.png'
+import logo1 from './l3.png'
 export default function Header() {
   return (
-    <header className='bg-slate-200 shadow-md'>
+    <header className='bg-everglade shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
@@ -13,12 +13,12 @@ export default function Header() {
         </Link>
         <ul className='flex gap-4'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-tuftbush hover:underline'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-slate-700 hover:underline'>
+            <li className='hidden sm:inline text-tuftbush hover:underline'>
               About
             </li>
           </Link>
