@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo1 from './l3.png'
 export default function Header() {
   return (
-    <header className='bg-everglade shadow-md'>
+    <header className='bg-everglade shadow-md w-full'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
