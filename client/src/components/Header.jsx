@@ -3,7 +3,7 @@ import logo1 from './l3.png'
 export default function Header() {
   return (
     <header className='bg-everglade shadow-md w-full'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+      <div className='flex justify-between items-center max-w-full mx-3  px-5 py-3'>
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
           <img src={logo1} width={180} height={100} alt="logo" />  
@@ -18,7 +18,7 @@ export default function Header() {
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-tuftbush hover:underline'>
+            <li className='sm:inline text-tuftbush hover:underline'>
               About
             </li>
           </Link>
