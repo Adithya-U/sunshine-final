@@ -1,25 +1,21 @@
 import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-
+import im1 from '../assets/jv.png'
+import im2 from '../assets/ren.png'
+import im3 from '../assets/1st.png'
 export default function Home() {
   const slides = [
     {
-      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+      url: im3,
     },
     {
-      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+      url: im2,
     },
     {
-      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+      url: im1,
     },
 
-    {
-      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,9 +34,17 @@ export default function Home() {
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
-  };  
+  };
+  const handleSwipe = (e) => {
+    if (e.direction === 'Left') {
+      nextSlide();
+    } else if (e.direction === 'Right') {
+      prevSlide();
+    }
+  };    
   return (
     <div className = 'h-full min-h-screen bg-tuftbush'>
+
        <div className=' h-[780px] w-full m-auto py-16 px-2 relative group'>
        <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
@@ -66,6 +70,7 @@ export default function Home() {
         ))}
       </div>
       </div>
+
       <a href="https://wa.me/9380007995?text=I'm%20looking%20for%20a%20flat%20for%20sale"><div class="fixed bg-everglade bottom-0 rounded-full text-tuftbush text-base left-0 p-4 m-10 flex flex-row w-auto align-middle">
       <svg 
     xmlns="http://www.w3.org/2000/svg"
